@@ -1,0 +1,10 @@
+sources:
+{
+	FBTestComponent.cpp
+	paint.cpp
+	font12.c
+	font16.c
+	font20.c
+	font24.c
+	font8.c	
+}

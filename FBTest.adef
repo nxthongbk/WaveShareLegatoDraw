@@ -1,0 +1,30 @@
+executables:
+{
+	fbtest = ( FBTestComponent )
+}
+
+processes:
+{
+	envVars:
+	{
+		LE_LOG_LEVEL = DEBUG
+	}
+
+	run:
+	{
+		( fbtest )
+	}
+
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}
+
+version: 1.0.0
+maxFileSystemBytes: 512K
+requires:
+{
+    device:
+	{		
+        [rw]    /dev/fb0  /dev/fb0 // Get read and write access to the UART1 port.
+	}
+}
